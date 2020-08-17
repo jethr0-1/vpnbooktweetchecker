@@ -21,13 +21,12 @@ fi
 echo "[+] Installing python3 dependencies..."
 pip3 install -r requirements.txt
 echo "[+] Done!"
-
+echo "[+] Making script executable..."
+chmod  +x ./vpnbook-tweet-checker.py
 echo "[?] Would you like to install program in your /usr/bin? (y/n)"
 read $INSTALLUSRBIN
 if [ INSTALLUSRBIN = "y" ]
 then
-    echo "[+] Making script executable..."
-    chmod  +x ./vpnbook-tweet-checker.py
     echo "[+] Copying to /usr/bin..."
     cp ./vpnbook-tweet-checker.py /usr/bin
     echo "[+] Done!"
